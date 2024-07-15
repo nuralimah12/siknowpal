@@ -70,7 +70,7 @@
             </div>
           </form>
           <div class="auth-footer text-center text-secondary mt-1">
-            <span class="copyright">Copyright ©{{date('Y')}}, PT PAL Indonesia</span>
+            <span class="copyright">Copyright ©{{date('Y')}}, PT PAL INDONESIA</span>
           </div>
         </div>
       </div>
