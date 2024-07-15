@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sirepo-JTI | @yield('title')</title>
   <!-- Icon -->
-  <link rel="icon" type="image/x-icon" href="{{asset('img/jti_logo.png')}}" />
+  <link rel="icon" type="image/x-icon" href="{{asset('img/logopal.png')}}" />
 
   <!-- CSS Bootsrap-->
   <link rel="stylesheet" href="{{asset('vendor/bootstrap-5.2/css/bootstrap.min.css')}}" />
@@ -41,8 +41,7 @@
           <div class="header">
             <div class="text-center">
               <div class="logo-wrapper d-flex gap-3 justify-content-center">
-                <img src="{{asset('img/jti_logo.png')}}" class="header-logo" />
-                <img src="{{asset('img/polinema_logo.png')}}" class="header-logo" />
+                <img src="{{asset('img/logopal.png')}}" class="header-logo" />
               </div>
               <h1 class="my-0 mt-4 fs-3">@yield('title')</h1>
             </div>
@@ -71,7 +70,7 @@
             </div>
           </form>
           <div class="auth-footer text-center text-secondary mt-1">
-            <span class="copyright">Copyright ©{{date('Y')}}, Sirepo-JTI</span>
+            <span class="copyright">Copyright ©{{date('Y')}}, PT PAL Indonesia</span>
           </div>
         </div>
       </div>
