@@ -110,10 +110,10 @@
                 strtotime($document->publication))}}</p>
               <a href="{{route('user.document', $document->user_id)}}"
                 class="d-block text-decoration-none thesis-identity mb-1">
-                {{$document->user_name}} - {{$document->program_study_name}}
+                {{$document->user_name}} - {{$document->departemen_name}}
               </a>
               <p class="thesis-abstract mb-1">
-                {{$document->document_abstract}}
+                {{$document->document_deskripsi}}
               </p>
             </div>
             @empty

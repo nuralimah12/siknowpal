@@ -1,4 +1,4 @@
-@extends('layouts.base')
+  @extends('layouts.base')
 
 @section('title', 'Detail Document')
 
@@ -30,7 +30,7 @@
     <a href={{route('user.document', $document->user->id)}} class="d-block text-decoration-none thesis-author mb-1
       thesis-identity" mt-1
       fw-normal">
-      {{$document->user->name}} - {{$document->user->programStudy->name}}
+      {{$document->user->name}} - {{$document->user->departemen->name}}
     </a>
   </div>
   <div class="body-content mt-3">
@@ -52,9 +52,9 @@
       <div class="tab-pane overview-wrapper fade show active" id="overview-tab-pane" role="tabpanel"
         aria-labelledby="home-tab" tabindex="0">
         <div class="info-wrapper abstract-wrapper mt-2">
-          <div class="title fw-medium">Abstract :</div>
+          <div class="title fw-medium">Deskripsi :</div>
           <div class="body fw-light">
-            {{$document->abstract}}
+            {{$document->deskripsi}}
           </div>
         </div>
         <div class="info-wrapper date-publication-wrapper">
@@ -67,11 +67,11 @@
         </div>
         <div class="info-wrapper prody-wrapper">
           <div class="title fw-medium">Program Study :</div>
-          <div class="body fw-light">{{$document->user->programStudy->name}}</div>
+          <div class="body fw-light">{{$document->user->departemen->name}}</div>
         </div>
         <div class="info-wrapper majority-wrapper">
           <div class="title fw-medium">Majority :</div>
-          <div class="body fw-light">{{$document->user->programStudy->majority->name}}</div>
+          <div class="body fw-light">{{$document->user->departemen->divisi->name}}</div>
         </div>
       </div>
       <div class="tab-pane fade" id="pdf-tab-pane" role="tabpanel" aria-labelledby="pdf-tab-pane" tabindex="0">

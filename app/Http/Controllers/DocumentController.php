@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Thesis;
+use App\Models\Dokumen;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -13,7 +13,7 @@ class DocumentController extends Controller
 {
     public function detailDocument($id)
     {
-        $document = Thesis::with('user.programStudy.majority')->find($id);
+        $document = Dokumen::with('user.departemen.divisi')->find($id);
 
         if(!$document) return back()->with('toast_error', 'Document Not Found');
 
@@ -22,7 +22,7 @@ class DocumentController extends Controller
 
     public function downloadDocument(string $fileName)
     {
-        $document = Thesis::with('user.programStudy.majority')->where('file_name', $fileName)->first();
+        $document = Dokumen::with('user.departemen.divisi')->where('file_name', $fileName)->first();
 
         if(!$document) return redirect()->route('home')->with('toast_error', 'Document Not Found');
 
@@ -52,7 +52,7 @@ class DocumentController extends Controller
 
     public function getSuggestionTitle( Request $request, string $userId)
     {
-        $titles = Thesis::select('title', 'id_user')
+        $titles = Dokumen::select('title', 'id_user')
                 ->where('title', 'like', '%'.$request->title.'%')
                 ->where('id_user', $userId)
                 ->get();
@@ -63,7 +63,7 @@ class DocumentController extends Controller
 
     public function getUserDocument(string $id, Request $request)
     {
-        $user = User::with('programStudy.majority')->find($id);
+        $user = User::with('departemen.divisi')->find($id);
 
         if(!$user) return redirect()->route('home')->with('toast_error', 'User Not Found');
 

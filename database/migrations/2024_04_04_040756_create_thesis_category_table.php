@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('thesis_category', function (Blueprint $table) {
+        Schema::create('document_category', function (Blueprint $table) {
             $table->id();
             $table->string('category');
             $table->timestamps();
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('thesis_category');
+        Schema::dropIfExists('document_category');
     }
 };

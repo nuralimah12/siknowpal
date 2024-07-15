@@ -4,9 +4,9 @@
     value="{{old('title', isset($document) ? $document->title : '')}}" name="title" required />
 </div>
 <div class="mb-2">
-  <label class="form-label">Abstract</label>
-  <textarea class="form-control" rows="3" placeholder="Enter document abstract" required
-    name="abstract">{{old('abstract', isset($document) ? $document->abstract : '')}}</textarea>
+  <label class="form-label">Deskripsi</label>
+  <textarea class="form-control" rows="3" placeholder="Enter document deskripsi" required
+    name="deskripsi">{{old('deskripsi', isset($document) ? $document->deskripsi : '')}}</textarea>
 </div>
 <div class="mb-2">
   <label class="form-label">Category</label>

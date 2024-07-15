@@ -18,10 +18,10 @@ class Admin extends Seeder
 
         $user = ModelsAdmin::create(
             [
-            'name' => 'Admin Sirepo-JTI',
-            'username' => 'adminsirepojti',
-            'email' => 'adminsirepojti@gmail.com',
-            'password' => Hash::make('adminpass'),
+            'name' => 'Admin Pal',
+            'username' => 'adminpal',
+            'email' => 'adminpal@gmail.com',
+            'password' => Hash::make('adminpassword'),
             'created_at' => now(),
             'updated_at' => now()
             ],
@@ -34,7 +34,7 @@ class Admin extends Seeder
                 'name' => $faker->name(),
                 'username' => $faker->userName(),
                 'email' => $faker->email(),
-                'password' => Hash::make('adminpass'),
+                'password' => Hash::make('adminpassword'),
                 'created_at' => now(),
                 'updated_at' => now()
             ]);

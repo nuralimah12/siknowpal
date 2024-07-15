@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ThesisCategory;
+use App\Models\DocumentCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -13,7 +13,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = ThesisCategory::orderBy('id', 'desc')->get();
+        $categories = DocumentCategory::orderBy('id', 'desc')->get();
 
         return view('admin_views.category.index', ['categories' => $categories]);
     }
@@ -41,7 +41,7 @@ class CategoryController extends Controller
         }
         
         try {
-            ThesisCategory::create($validator->safe()->only('category'));
+            DocumentCategory::create($validator->safe()->only('category'));
 
             return redirect()->back()->with('toast_success', 'Category Created');
         } catch (\Throwable $th) {
@@ -82,7 +82,7 @@ class CategoryController extends Controller
         }
         
         try {
-            $thesis = ThesisCategory::find($id);
+            $thesis = DocumentCategory::find($id);
 
             if(!$thesis) return redirect()->back()->with('toast_error', 'category Not Found');
 
@@ -101,7 +101,7 @@ class CategoryController extends Controller
     public function destroy(string $id)
     {
         try {
-            $thesis = ThesisCategory::find($id);
+            $thesis = DocumentCategory::find($id);
 
             if(!$thesis) return redirect()->route('categories.index')->with('toast_error', 'category Not Found');
 

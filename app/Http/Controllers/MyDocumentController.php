@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DocumentCategory;
+use App\Models\Dokumen;
 use App\Models\Thesis;
 use App\Models\ThesisCategory;
 use Illuminate\Http\RedirectResponse;
@@ -33,7 +35,7 @@ class MyDocumentController extends Controller
      */
     public function create()
     {
-        $categories = ThesisCategory::all();
+        $categories = DocumentCategory::all();
 
         return view('user_views.user_document_form', compact('categories'));
     }
@@ -45,7 +47,7 @@ class MyDocumentController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'title' => 'required',
-            'abstract' => 'required',
+            'deskripsi' => 'required',
             'category' => 'required',
             'file' => 'required|mimes:pdf|max:15360'
         ]);
@@ -68,7 +70,7 @@ class MyDocumentController extends Controller
             $data['id_category'] = $data['category'];
             $data['id_user'] = Auth::user()->id;
 
-            Thesis::create($data);
+            Dokumen::create($data);
 
             Session::flash('toast_success', 'Document Added');
             return redirect()->route('my-document.index');
@@ -83,7 +85,7 @@ class MyDocumentController extends Controller
      */
     public function show(string $id)
     {
-        $document = Thesis::with('user.programStudy.majority')->find($id);
+        $document = Dokumen::with('user.departemen.divisi')->find($id);
 
         if(!$document) return back()->with('toast_error', 'Document Not Found');
 
@@ -95,9 +97,9 @@ class MyDocumentController extends Controller
      */
     public function edit(string $id)
     {
-        $categories = ThesisCategory::all();
+        $categories = DocumentCategory::all();
 
-        $document = Thesis::find($id);
+        $document = Dokumen::find($id);
 
         if(!$document) return back()->with('toast_error', 'Document Not Found');
 
@@ -111,7 +113,7 @@ class MyDocumentController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'title' => 'nullable',
-            'abstract' => 'nullable',
+            'deskripsi' => 'nullable',
             'category' => 'nullable',
             'file' => 'nullable|mimes:pdf|max:15360'
         ]);
@@ -123,7 +125,7 @@ class MyDocumentController extends Controller
         }
 
         try {
-            $oldData = Thesis::find($id);
+            $oldData = Dokumen::find($id);
             
             if(!$oldData) return redirect()->route('my-document.index')->with('toast_error', 'Document Not Found');
             
@@ -131,8 +133,8 @@ class MyDocumentController extends Controller
             if($validator->safe()->title){
                 $newData['title'] = $validator->safe()->title;
             }
-            if($validator->safe()->abstract){
-                $newData['abstract'] = $validator->safe()->abstract;
+            if($validator->safe()->deskripsi){
+                $newData['deskripsi'] = $validator->safe()->deskripsi;
             }
             if($validator->safe()->category){
                 $newData['id_category'] = $validator->safe()->category;
@@ -165,7 +167,7 @@ class MyDocumentController extends Controller
     public function destroy(string $id)
     {
         try {
-            $thesis = Thesis::find($id);
+            $thesis = Dokumen::find($id);
 
             if(!$thesis) return redirect()->route('my-document.index')->with('toast_error', 'Document Not Found');
 

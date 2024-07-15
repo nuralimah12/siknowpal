@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DocumentCategory;
+use App\Models\Dokumen;
 use App\Models\Thesis;
 use App\Models\ThesisCategory;
 use App\Models\User;
@@ -11,6 +13,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use League\CommonMark\Node\Block\Document;
 
 class UserDocumentManagementController extends Controller
 {
@@ -31,7 +34,7 @@ class UserDocumentManagementController extends Controller
      */
     public function create(string $userId)
     {
-        $categories = ThesisCategory::all();
+        $categories = DocumentCategory::all();
 
         $user = User::find($userId);
 
@@ -47,7 +50,7 @@ class UserDocumentManagementController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'title' => 'required',
-            'abstract' => 'required',
+            'deskripsi' => 'required',
             'category' => 'required',
             'file' => 'required|mimes:pdf|max:15360'
         ]);
@@ -70,7 +73,7 @@ class UserDocumentManagementController extends Controller
             $data['id_category'] = $data['category'];
             $data['id_user'] = $userId;
 
-            Thesis::create($data);
+            Dokumen::create($data);
 
             Session::flash('toast_success', 'Document Added');
             return redirect()->route('user-management.document-management.index', $userId);
@@ -85,9 +88,9 @@ class UserDocumentManagementController extends Controller
      */
     public function edit(string $userId, string $documentId)
     {
-        $categories = ThesisCategory::all();
+        $categories = DocumentCategory::all();
 
-        $document = Thesis::find($documentId);
+        $document = Dokumen::find($documentId);
 
         $user = User::find($userId);
 
@@ -103,7 +106,7 @@ class UserDocumentManagementController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'title' => 'nullable',
-            'abstract' => 'nullable',
+            'deskripsi' => 'nullable',
             'category' => 'nullable',
             'file' => 'nullable|mimes:pdf|max:15360'
         ]);
@@ -115,7 +118,7 @@ class UserDocumentManagementController extends Controller
         }
 
         try {
-            $oldData = Thesis::find($documentId);
+            $oldData = Dokumen::find($documentId);
             
             if(!$oldData) return redirect()->route('my-document.index')->with('toast_error', 'Document Not Found');
             
@@ -123,8 +126,8 @@ class UserDocumentManagementController extends Controller
             if($validator->safe()->title){
                 $newData['title'] = $validator->safe()->title;
             }
-            if($validator->safe()->abstract){
-                $newData['abstract'] = $validator->safe()->abstract;
+            if($validator->safe()->deskripsi){
+                $newData['deskripsi'] = $validator->safe()->deskripsi;
             }
             if($validator->safe()->category){
                 $newData['id_category'] = $validator->safe()->category;
@@ -158,7 +161,7 @@ class UserDocumentManagementController extends Controller
     public function destroy(string $userId, string $documentId)
     {
         try {
-            $thesis = Thesis::find($documentId);
+            $thesis = Dokumen::find($documentId);
 
             if(!$thesis) return redirect()->route('my-document.index')->with('toast_error', 'Document Not Found');
 

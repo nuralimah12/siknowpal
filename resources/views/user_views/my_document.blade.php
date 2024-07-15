@@ -30,8 +30,8 @@
     <div class="identity-box">
       <p class="author fw-semibold ls-b mb-1">{{$user->name}}</p>
       <div class="departement-identity">
-        <p class="prody mb-0 ls-s">{{$user->programStudy->name}}</p>
-        <p class="departement ls-s">{{$user->programStudy->majority->name}}</p>
+        <p class="prody mb-0 ls-s">{{$user->departemen->name}}</p>
+        <p class="departement ls-s">{{$user->departemen->divisi->name}}</p>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@
             {{$item->title}}
           </a>
           <a href="{{route('my-document.index')}}" class="d-block text-decoration-none thesis-author mb-1">
-            {{$user->username}} - {{$user->programStudy->name}}
+            {{$user->username}} - {{$user->departemen->name}}
           </a>
           <p class="thesis-abstract mb-1">
             {{$item->abstract}}

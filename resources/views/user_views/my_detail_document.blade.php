@@ -31,7 +31,7 @@
     </div>
     <a href="{{route('my-document.index')}}" class="d-block text-decoration-none thesis-author mb-1 thesis-identity mt-1
       fw-normal">
-      {{$document->user->name}} - {{$document->user->programStudy->name}}
+      {{$document->user->name}} - {{$document->user->departemen->name}}
     </a>
     <div class="btn-action-wrapper mt-1">
       <a href="{{route('my-document.edit', $document->id)}}" class="btn btn-warning text-white ">Edit Document</a>
@@ -59,7 +59,7 @@
         <div class="info-wrapper abstract-wrapper mt-2">
           <div class="title fw-medium">Abstract :</div>
           <div class="body fw-light">
-            {{$document->abstract}}
+            {{$document->deskripsi}}
           </div>
         </div>
         <div class="info-wrapper date-publication-wrapper">
@@ -72,11 +72,11 @@
         </div>
         <div class="info-wrapper prody-wrapper">
           <div class="title fw-medium">Program Study :</div>
-          <div class="body fw-light">{{$document->user->programStudy->name}}</div>
+          <div class="body fw-light">{{$document->user->departemen->name}}</div>
         </div>
         <div class="info-wrapper majority-wrapper">
           <div class="title fw-medium">Majority :</div>
-          <div class="body fw-light">{{$document->user->programStudy->majority->name}}</div>
+          <div class="body fw-light">{{$document->user->departemen->divisi->name}}</div>
         </div>
       </div>
       <div class="tab-pane fade" id="pdf-tab-pane" role="tabpanel" aria-labelledby="pdf-tab-pane" tabindex="0">

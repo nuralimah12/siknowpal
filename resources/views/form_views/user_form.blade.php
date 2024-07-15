@@ -20,16 +20,16 @@
     placeholder="Enter the password" name="password" />
 </div>
 <div class="mb-2">
-  <label class="form-label">Departement</label>
-  <input type="text" readonly class="form-control" value="{{$majority->name}}" name="departement" />
+  <label class="form-label">Divisi</label>
+  <input type="text" readonly class="form-control" value="{{$majority->name}}" name="divisi" />
 </div>
 <div class="mb-2">
-  <label class="form-label">Program Study</label>
-  <select class="form-select" aria-label="Default select example" name="program_study" {{Request::segment(2)==='create'
+  <label class="form-label">Departement</label>
+  <select class="form-select" aria-label="Default select example" name="departemen" {{Request::segment(2)==='create'
     ? 'required' : '' }}>
-    <option value="">Select program study</option>
+    <option value="">Select Departemen</option>
     @foreach ($prodys as $prody)
-    <option value="{{$prody->id}}" @selected(old('program_study', isset($user) ? $user->id_program_study :
+    <option value="{{$prody->id}}" @selected(old('departemen', isset($user) ? $user->id_departemen :
       '') ==$prody->id)>
       {{$prody->name}}
     </option>

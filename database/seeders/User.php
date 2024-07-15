@@ -18,7 +18,7 @@ class User extends Seeder
 
         $user = ModelsUser::create(
             [
-            'id_program_study' => 1,
+            'id_departemen' => 1,
             'name' => 'Farhan',
             'username' => 'farhan12',
             'email' => 'farhan123@gmail.com',
@@ -29,20 +29,6 @@ class User extends Seeder
         );
         $user->assignRole('user');
 
-
-        for ($i=0; $i < 100; $i++) { 
-            $user = ModelsUser::create([
-                'id_program_study' => $faker->numberBetween(1,2),
-                'name' => $faker->name(),
-                'username' => $faker->userName(),
-                'email' => $faker->email(),
-                'password' => Hash::make('userpass'),
-                'created_at' => now(),
-                'updated_at' => now()
-            ]);
-
-            $user->assignRole('user');
-        }
 
     }
 }

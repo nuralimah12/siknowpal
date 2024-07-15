@@ -21,7 +21,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'id_program_study',
+        'id_departemen',
         'name',
         'username',
         'email',
@@ -50,14 +50,14 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function programStudy()
+    public function departemen()
     {
-        return $this->belongsTo(ProgramStudy::class, 'id_program_study', 'id');
+        return $this->belongsTo(Departemen::class, 'id_departemen', 'id');
     }
 
     public function document()
     {
-        return $this->hasMany(Thesis::class, 'id_user', 'id');
+        return $this->hasMany(Dokumen::class, 'id_user', 'id');
     }
 
 }

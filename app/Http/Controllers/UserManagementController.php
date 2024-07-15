@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Departemen;
+use App\Models\Divisi;
 use App\Models\Majority;
 use App\Models\ProgramStudy;
 use App\Models\User;
@@ -32,9 +34,9 @@ class UserManagementController extends Controller
      */
     public function create()
     {
-        $majority = Majority::first();
+        $majority = Divisi::first();
 
-        $prodys = ProgramStudy::all();
+        $prodys = Departemen::all();
 
         return view('admin_views.users.user_upsert_form', compact('majority', 'prodys'));
     }
@@ -49,7 +51,7 @@ class UserManagementController extends Controller
             'username' => 'required|unique:users,username',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6',
-            'program_study' => 'required',
+            'departemen' => 'required',
             'profile_picture' => 'nullable|mimes:png,jpg,jpeg|max:1024',
         ]);
 
@@ -70,7 +72,7 @@ class UserManagementController extends Controller
                 $data['profile_picture'] = $fileName;
             }
 
-            $data['id_program_study'] = $data['program_study'];
+            $data['id_departemen'] = $data['departemen'];
 
             $user = User::create($data);
 
@@ -99,9 +101,9 @@ class UserManagementController extends Controller
      */
     public function edit(string $id)
     {
-        $majority = Majority::first();
+        $majority = Divisi::first();
 
-        $prodys = ProgramStudy::all();
+        $prodys = Departemen::all();
 
         $user = User::find($id);
 
@@ -120,7 +122,7 @@ class UserManagementController extends Controller
             'username' => 'nullable|unique:users,username,'.$id.'id',
             'email' => 'nullable|email|unique:users,email,'.$id.'id',
             'password' => 'nullable|min:6',
-            'program_study' => 'nullable',
+            'departemen' => 'nullable',
             'profile_picture' => 'nullable|mimes:png,jpg,jpeg|max:1024',
         ]);
 
@@ -148,8 +150,8 @@ class UserManagementController extends Controller
             if($validator->safe()->password){
                 $newData['password'] = $validator->safe()->password;
             }
-            if($validator->safe()->program_study){
-                $newData['id_program_study'] = $validator->safe()->program_study;
+            if($validator->safe()->departemen){
+                $newData['id_departemen'] = $validator->safe()->departemen;
             }
             if($request->profile_picture){
                 // Store profile picture
