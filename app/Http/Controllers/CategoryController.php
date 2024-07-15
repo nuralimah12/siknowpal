@@ -32,7 +32,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'category' => 'required|string|unique:thesis_category,category',
+            'category' => 'required|string|unique:document_category,category',
         ]);
 
         if($validator->fails()){
@@ -73,7 +73,7 @@ class CategoryController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'category' => 'required|string|unique:thesis_category,category,'.$id.',id',
+            'category' => 'required|string|unique:document_category,category,'.$id.',id',
         ]);
 
         if($validator->fails()){

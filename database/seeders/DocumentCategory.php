@@ -16,17 +16,17 @@ class DocumentCategory extends Seeder
         {
             ModelsDocumentCategory::insert([
                 [
-                'category' => 'Big Data',
+                'category' => 'Modul',
                 'created_at' => now(),
                 'updated_at' => now()
                 ],
                 [
-                'category' => 'Internet Of Thing',
+                'category' => 'Manual Book',
                 'created_at' => now(),
                 'updated_at' => now()
                 ],
                 [
-                'category' => 'Business Inteligence',
+                'category' => 'News',
                 'created_at' => now(),
                 'updated_at' => now()
                 ],

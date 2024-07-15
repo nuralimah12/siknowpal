@@ -19,9 +19,9 @@ class User extends Seeder
         $user = ModelsUser::create(
             [
             'id_departemen' => 1,
-            'name' => 'Farhan',
-            'username' => 'farhan12',
-            'email' => 'farhan123@gmail.com',
+            'name' => 'Sandy Priyo',
+            'username' => '105194549',
+            'email' => 'sandypriyo@gmail.com',
             'password' => Hash::make('userpass'),
             'created_at' => now(),
             'updated_at' => now()

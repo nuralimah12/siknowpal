@@ -16,13 +16,19 @@ class Departemen extends Seeder
         ModelsDepartemen::insert([
             [
             'id_divisi' => 1,
-            'name' => 'Security dan Tata Kelola Teknologi Informasi',
+            'name' => 'Departemen Security dan Tata Kelola Teknologi Informasi',
             'created_at' => now(),
             'updated_at' => now()
             ],
             [
             'id_divisi' => 1,
-            'name' => 'Teknologi Informasi',
+            'name' => 'Departemen Security & Tata Kelola TI',
+            'created_at' => now(),
+            'updated_at' => now()
+            ],
+            [
+            'id_divisi' => 1,
+            'name' => 'Departemen IM4 & War Room',
             'created_at' => now(),
             'updated_at' => now()
             ],
