@@ -22,10 +22,10 @@
     }
 
     .sidebar-logo {
-        max-width: 75%;
+        max-width: 85%;
 
         @include media-breakpoint-down(md) {
-            max-width: 60%;
+            max-width: 70%;
         }
     }
 
