@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;300;400;500;600;700;900&display=swap");
 .offcanvas {
-  background-color: #2d4059;
+  background-color: #0B2447;
 }
 .offcanvas .close-icon {
   cursor: pointer;
@@ -17,7 +17,7 @@
   }
 }
 .offcanvas .nav-item:hover {
-  background-color: #b14e56;
+  background-color: #19376D;
 }
 .offcanvas .sidebar-logo {
   max-width: 75%;

@@ -48,7 +48,7 @@
           $('.search-wrapper').addClass('active')
         }
         data.forEach(e => {
-          $('.suggestion-box').append(`<div class="suggestion-item py-2 ps-3">${e.title}</div>`)
+          $('.suggestion-box').append(<div class="suggestion-item py-2 ps-3">${e.title}</div>)
           });
 
           $(".suggestion-item").on("click", (e) => {

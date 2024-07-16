@@ -80,7 +80,7 @@ body .content-wrapper .search-wrapper {
   z-index: 900;
 }
 body .content-wrapper .search-wrapper.active {
-  background-color: white;
+  background-color: #E6E6E6;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 body .content-wrapper .search-wrapper.active .suggestion-box {
@@ -111,7 +111,7 @@ body .content-wrapper .year-input {
   border-radius: 8px !important;
 }
 body .content-wrapper .btn-apply {
-  background-color: #ea5455;
+  background-color: #19376D;
   color: white;
   font-size: 16px;
 }
