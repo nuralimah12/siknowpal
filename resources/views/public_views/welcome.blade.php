@@ -12,8 +12,8 @@
         <img src="{{asset('img/logopal.png')}}" class="jti-logo" />
       </div>
         <div class="text-wrapper gap-1">
-        {{-- <p class="m-0 head-title">Sistem Informasi</p> --}}
-          <h1 class="fw-bold m-0 main-title">Sistem Informasi Knowledge Sharing</h1>
+          <center><p class="m-0 head-title">Sistem Informasi</p></center>
+          <center><h1 class="fw-bold m-0 main-title">Knowledge Sharing Divisi Teknologi Informasi</h1></center>
         </div>
       <div class="search-wrapper pb-2 mt-4 rounded rounded-3 w-100">
         <div class="input-group">
