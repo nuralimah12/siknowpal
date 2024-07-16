@@ -70,7 +70,7 @@ body .content-wrapper .main-title {
   }
 }
 body .content-wrapper .jti-logo {
-  max-width: 170px;
+  max-width: 220px;
 }
 @media (max-width: 991.98px) {
   body .content-wrapper .jti-logo {
@@ -122,7 +122,7 @@ body .content-wrapper .btn-apply {
   font-size: 16px;
 }
 body .content-wrapper .main-content {
-  margin-top: 15%;
+  margin-top: 8%;
 }
 @media (max-width: 991.98px) {
   body .content-wrapper .main-content {
@@ -162,7 +162,7 @@ body .content-wrapper .content .thesis-list-box .pagination-nav {
 }
 body .content-wrapper .content .thesis-list-box .thesis-box .thesis-item .thesis-title {
   font-size: 20px;
-  color: #ea5455;
+  color: #19376D;
 }
 @media (max-width: 991.98px) {
   body .content-wrapper .content .thesis-list-box .thesis-box .thesis-item .thesis-title {
@@ -177,7 +177,7 @@ body .content-wrapper .content .thesis-list-box .thesis-box .thesis-item a.thesi
 }
 body .content-wrapper .content .thesis-list-box .thesis-box .thesis-item .thesis-identity {
   font-size: 12px;
-  color: #f07b3f;
+  color: #576CBC;
 }
 body .content-wrapper .content .thesis-list-box .thesis-box .thesis-item .thesis-abstract {
   font-size: 12px;

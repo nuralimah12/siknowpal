@@ -56,7 +56,7 @@
               </div>
             </div>
             <div class="program-study-filter mt-2">
-              <p class="mb-1 filter-title">Program Study</p>
+              <p class="mb-1 filter-title">Departemen</p>
               <div class="category-box d-flex flex-column gap-1">
                 @php($idProdys = collect(request()->get('id_program_study')))
                 @foreach ($prodys as $prody)
