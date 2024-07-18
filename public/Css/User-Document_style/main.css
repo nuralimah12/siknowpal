@@ -46,6 +46,11 @@ body .content-wrapper .input-group {
   width: 100%;
   box-shadow: -1px 24px 26px -8px rgba(0, 0, 0, 0.15);
 }
+
+body .content-wrapper .input-group .btn-primary {
+  background-color: #19376D; /* Warna tombol */
+}
+
 body .content-wrapper .user-document-content .identity-wrapper .img-avatar {
   aspect-ratio: 1;
   border-radius: 50%;
@@ -66,14 +71,14 @@ body .content-wrapper .user-document-content .identity-wrapper .identity-box .au
   }
 }
 body .content-wrapper .user-document-content .identity-wrapper .identity-box .departement-identity p {
-  color: #f07b3f;
+  color: #576CBC;
 }
 body .content-wrapper .user-document-content .thesis-list-box .pagination-nav {
   font-size: 12px;
 }
 body .content-wrapper .user-document-content .thesis-list-box .thesis-box .thesis-item .thesis-title {
   font-size: 20px;
-  color: #ea5455;
+  color: #19376D;
 }
 @media (max-width: 991.98px) {
   body .content-wrapper .user-document-content .thesis-list-box .thesis-box .thesis-item .thesis-title {
@@ -88,11 +93,11 @@ body .content-wrapper .user-document-content .thesis-list-box .thesis-box .thesi
 }
 body .content-wrapper .user-document-content .thesis-list-box .thesis-box .thesis-item .thesis-author {
   font-size: 12px;
-  color: #f07b3f;
+  color: #576CBC;
 }
 body .content-wrapper .user-document-content .thesis-list-box .thesis-box .thesis-item .thesis-abstract {
   font-size: 12px;
-  color: #2d4059;
+  color: #2D4059;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3; /* number of lines to show */

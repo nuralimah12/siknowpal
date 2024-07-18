@@ -51,7 +51,7 @@
             <input type="text" class="form-control py-2 px-3 search-input border-0" placeholder="Search"
               aria-label="Recipient's username" list="titleListOption" aria-describedby="basic-addon2" name="title" />
             <datalist id="titleListOption" class="titleListOption"> </datalist>
-            <button type="submit" class="input-group-text btn btn-danger d-flex align-items-center fs-5 px-3"
+            <button type="submit" class="input-group-text btn btn-primary d-flex align-items-center fs-5 px-3"
               id="basic-addon2">
               <i class="ri-search-line"></i>
             </button>

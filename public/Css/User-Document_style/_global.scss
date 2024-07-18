@@ -78,7 +78,7 @@ body {
 
           .departement-identity {
             p {
-              color: #f07b3f;
+              color: #576CBC;
             }
           }
         }
@@ -93,7 +93,7 @@ body {
           .thesis-item {
             .thesis-title {
               font-size: 20px;
-              color: #ea5455;
+              color: #19376D;
 
               @include media-breakpoint-down(lg) {
                 font-size: 16px;
@@ -109,7 +109,7 @@ body {
 
             .thesis-author {
               font-size: 12px;
-              color: #f07b3f;
+              color: #2D4059;
             }
 
             .thesis-abstract {
