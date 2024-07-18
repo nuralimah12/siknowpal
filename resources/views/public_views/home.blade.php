@@ -26,7 +26,7 @@
       <div class="input-group input-group-search position-relative">
         <input type="text" value="{{request()->get('title')}}" class="form-control py-2 px-3 search-input border-0"
           placeholder="Search" name="title" />
-        <button type="submit" class="input-group-text btn btn-danger d-flex align-items-center fs-5 px-3"
+        <button type="submit" class="input-group-text btn btn-primary d-flex align-items-center fs-5 px-3"
           id="basic-addon2">
           <i class="ri-search-line"></i>
         </button>
