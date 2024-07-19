@@ -87,7 +87,7 @@ body .content-wrapper .main-title {
 }
 
 body .content-wrapper .jti-logo {
-  max-width: 220px;
+  max-width: 225px;
 }
 
 @media (max-width: 991.98px) {
@@ -154,7 +154,7 @@ body .content-wrapper .btn-apply {
 }
 
 body .content-wrapper .main-content {
-  margin-top: 8%;
+  margin-top: 12%;
 }
 
 @media (max-width: 991.98px) {
