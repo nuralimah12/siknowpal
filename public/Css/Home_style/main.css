@@ -5,8 +5,11 @@ body {
   transition: all 0.5s ease-out;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: white;
+  /* background-color: white; */
   min-height: 100dvh;
+  background: url('/img/gambarpal.jpg') no-repeat center center fixed;
+  background-size: cover;
+
 }
 
 body p {
