@@ -7,6 +7,15 @@ body {
   scroll-behavior: smooth;
   background-color: white;
   min-height: 100dvh;
+<<<<<<< HEAD
+  background: url('/img/gambarpal.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body p {
+  color: #2d4059;
+=======
+>>>>>>> 5a054693151f735fd8ec817852e618634e8ce503
 }
 
 body .content-wrapper {
