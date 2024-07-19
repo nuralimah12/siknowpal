@@ -18,3 +18,7 @@
   -o-object-fit: cover;
      object-fit: cover;
 }/*# sourceMappingURL=main.css.map */
+
+.text-blue {
+  color: #0B2447; /* Warna biru */
+}

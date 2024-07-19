@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Knowledge @yield('title')</title>
   <!-- Icon -->
-  <link rel="icon" type="image/x-icon" href="{{asset('img/jti_logo.png')}}" />
+  <link rel="icon" type="image/x-icon" href="{{asset('img/logopal.png')}}" />
 
   <!-- CSS Bootsrap-->
   <link rel="stylesheet" href="{{asset('vendor/bootstrap-5.2/css/bootstrap.min.css')}}" />
@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="{{asset('Css/Off-canvase_style/main.css')}}" />
   <link rel="stylesheet" href="{{asset('Css/Footer_style/main.css')}}" />
   <link rel="stylesheet" href="{{asset('Css/Preloader/main.css')}}" />
+  @stack('style')
 
 </head>
 
