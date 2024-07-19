@@ -8,6 +8,6 @@
 
 @section('custom_link_label', 'SignIn as Admin')
 
-{{-- @section('background_url', asset('img/auth-user-hero.jpg')) --}}
+@section('background_url', asset('img/signin_user.png'))
 
-@section('bg-position-y', '80%')
+@section('bg-position-y', '45%')
