@@ -131,12 +131,12 @@ body .content-wrapper .suggestion-box {
 body .content-wrapper .input-group {
   width: 100%;
   background-color: #E6E6E6;
-  box-shadow: -1px 24px 26px -8px rgba(0, 0, 0, 0.15);
+  /* box-shadow: -1px 24px 26px -8px rgba(0, 0, 0, 0.15); */
 }
 
 body .content-wrapper .input-group .search-input {
   font-size: 20px;
-  background-color: #E6E6E6; /* Warna latar belakang input */
+  background-color: #ffff; /* Warna latar belakang input */
 }
 
 @media (max-width: 991.98px) {
