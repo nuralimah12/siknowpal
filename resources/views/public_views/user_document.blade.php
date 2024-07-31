@@ -111,7 +111,7 @@
           $('#titleListOption').append($('<option>', {
             value: e.title
           }));
-        }); 
+        }); 4
       },
     );
   }, 500));
