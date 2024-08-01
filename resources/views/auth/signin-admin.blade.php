@@ -8,6 +8,6 @@
 
 @section('custom_link_label', 'SignIn as User')
 
-@section('background_url', asset('img/signin_user.png'))
+@section('background_url', asset('img/bgpal.png'))
 
 @section('bg-position-y', '45%')

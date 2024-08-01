@@ -39,7 +39,7 @@ class userController extends Controller
 
         $validator = Validator::make($request->all(), [
             'username' => 'nullable|string|unique:users,username,'.$id.',id',
-            'profile_picture' => 'nullable|mimes:png,jpg,jpeg|max:1024',
+            'profile_picture' => 'nullable|mimes:png,jpg,jpeg',
             'old_password' => 'nullable',
             'new_password' => 'nullable|min:6',
             'confirm_password' => 'required_with:new_password|same:new_password',

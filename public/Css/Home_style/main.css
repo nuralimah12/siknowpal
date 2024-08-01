@@ -131,7 +131,12 @@ body .content-wrapper .suggestion-box {
 body .content-wrapper .input-group {
   width: 100%;
   background-color: #E6E6E6;
+<<<<<<< HEAD
   /* box-shadow: -1px 24px 26px -8px rgba(0, 0, 0, 0.15); */
+=======
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  box-shadow: -1px 24px 26px -8px rgba(0, 0, 0, 0.15);
+>>>>>>> 1af267653d1d46aee9efe94b34f7915dc3d3f9ce
 }
 
 body .content-wrapper .input-group .search-input {
